@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 1. SEO & Favicon (Pareto Rules) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Audyari Wiyono | Frontend Developer</title>
+    <meta name="description"
+        content="Portfolio projects of Audyari Wiyono, showcasing HTML, CSS, and Responsive Design work.">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- 2. Open Graph Tags (Social Media) -->
+    <meta property="og:title" content="Projects - Audyari Wiyono | Frontend Developer">
+    <meta property="og:description" content="View my portfolio projects and web development work.">
+    <meta property="og:image" content="https://your-website-url.com/og-image.jpg">
+    <meta property="og:url" content="https://your-website-url.com/projects.html">
+    <meta property="og:type" content="website">
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects - Audyari Wiyono">
+    <meta name="twitter:description" content="Portfolio projects showcasing frontend development skills.">
+    <meta name="twitter:image" content="https://your-website-url.com/og-image.jpg">
+
+    <!-- CSS Styles (Shared) -->
+    <style>
+        /* Reset & Base Variables */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f4f4;
+            --paper-color: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Utama (Bentuk Kertas) */
+        .cv-container {
+            background-color: var(--paper-color);
+            width: 100%;
+            max-width: 800px;
+            padding: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* HEADER SECTION */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a.active {
+            color: var(--accent-color);
+            font-weight: bold;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* GENERAL SECTION STYLES */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        /* PROJECTS SECTION */
+        .project-item {
+            margin-bottom: 30px;
+            background: #fafafa;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.2s;
+        }
+
+        .project-item:hover {
+            transform: translateX(5px);
+            background: #f0f8ff;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .project-description {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .project-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-tags {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--accent-color);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* RESPONSIVE (Mobile View) */
+        @media (max-width: 600px) {
+            .cv-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="cv-container">
+
+        <!-- HEADER: Nama, Jabatan, Navigasi -->
+        <header>
+            <h1>Audyari Wiyono</h1>
+            <p class="job-title">Frontend Developer</p>
+
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="Projects.html" class="active">Projects</a></li>
+                    <li><a href="Articles.html">Articles</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- SECTION: PROJECTS -->
+        <section id="projects">
+            <h2>My Projects</h2>
+
+            <article class="project-item">
+                <span class="project-title">HTML Only Portfolio</span>
+                <p class="project-description">A responsive portfolio website built strictly with semantic HTML5 and
+                    CSS3 without external frameworks. Focused on accessibility and performance.</p>
+                <a href="#" class="project-link">View Project →</a>
+                <div class="project-tags">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Responsive</span>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <span class="project-title">Roundabout.sk Clone</span>
+                <p class="project-description">Recreating the front-end interface of roundabout.sk using modern CSS Grid
+                    and Flexbox techniques to ensure perfect layout across devices.</p>
+                <a href="#" class="project-link">View Project →</a>
+                <div class="project-tags">
+                    <span class="tag">CSS Grid</span>
+                    <span class="tag">Flexbox</span>
+                    <span class="tag">Modern CSS</span>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <span class="project-title">Multi-Page Website</span>
+                <p class="project-description">A complete multi-page website with consistent navigation and responsive
+                    design, demonstrating proper HTML structure and semantic markup.</p>
+                <a href="#" class="project-link">View Project →</a>
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Navigation</span>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <span class="project-title">Contact Form UI</span>
+                <p class="project-description">Clean and accessible contact form design with proper validation states
+                    and mobile-first approach.</p>
+                <a href="#" class="project-link">View Project →</a>
+                <div class="project-tags">
+                    <span class="tag">Forms</span>
+                    <span class="tag">UX</span>
+                    <span class="tag">Accessibility</span>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; All rights reserved 2025</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

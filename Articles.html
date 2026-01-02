@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 1. SEO & Favicon (Pareto Rules) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Audyari Wiyono | Frontend Developer</title>
+    <meta name="description"
+        content="Articles and blog posts about web development, HTML, CSS, and frontend best practices by Audyari Wiyono.">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- 2. Open Graph Tags (Social Media) -->
+    <meta property="og:title" content="Articles - Audyari Wiyono | Frontend Developer">
+    <meta property="og:description" content="Read my thoughts on web development and frontend technologies.">
+    <meta property="og:image" content="https://your-website-url.com/og-image.jpg">
+    <meta property="og:url" content="https://your-website-url.com/articles.html">
+    <meta property="og:type" content="website">
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Articles - Audyari Wiyono">
+    <meta name="twitter:description" content="Web development articles and insights.">
+    <meta name="twitter:image" content="https://your-website-url.com/og-image.jpg">
+
+    <!-- CSS Styles (Shared) -->
+    <style>
+        /* Reset & Base Variables */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f4f4;
+            --paper-color: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Utama (Bentuk Kertas) */
+        .cv-container {
+            background-color: var(--paper-color);
+            width: 100%;
+            max-width: 800px;
+            padding: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* HEADER SECTION */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a.active {
+            color: var(--accent-color);
+            font-weight: bold;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* GENERAL SECTION STYLES */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        /* ARTICLES SECTION */
+        .article-item {
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .article-item:last-child {
+            border-bottom: none;
+        }
+
+        .article-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+            display: block;
+            transition: color 0.2s;
+        }
+
+        .article-title:hover {
+            color: var(--accent-color);
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .article-excerpt {
+            color: #555;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .article-tag {
+            background: #e8f4fd;
+            color: var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* RESPONSIVE (Mobile View) */
+        @media (max-width: 600px) {
+            .cv-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="cv-container">
+
+        <!-- HEADER: Nama, Jabatan, Navigasi -->
+        <header>
+            <h1>Audyari Wiyono</h1>
+            <p class="job-title">Frontend Developer</p>
+
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html">Home</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Articles.html" class="active">Articles</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- SECTION: ARTICLES -->
+        <section id="articles">
+            <h2>Latest Articles</h2>
+
+            <article class="article-item">
+                <a href="#" class="article-title">Understanding Semantic HTML: Beyond Just Tags</a>
+                <div class="article-meta">
+                    <span class="article-tag">HTML</span>
+                    <span>December 2024</span>
+                    <span>5 min read</span>
+                </div>
+                <p class="article-excerpt">
+                    Semantic HTML is the foundation of accessible and SEO-friendly web development. Learn how to use
+                    proper semantic elements to improve your website's structure and accessibility.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </article>
+
+            <article class="article-item">
+                <a href="#" class="article-title">Modern CSS Layout: Grid vs Flexbox</a>
+                <div class="article-meta">
+                    <span class="article-tag">CSS</span>
+                    <span>November 2024</span>
+                    <span>7 min read</span>
+                </div>
+                <p class="article-excerpt">
+                    CSS Grid and Flexbox are powerful layout tools. Discover when to use each one and how they can
+                    work together to create responsive, beautiful layouts with less code.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </article>
+
+            <article class="article-item">
+                <a href="#" class="article-title">Performance Optimization Tips for Frontend Developers</a>
+                <div class="article-meta">
+                    <span class="article-tag">Performance</span>
+                    <span>October 2024</span>
+                    <span>10 min read</span>
+                </div>
+                <p class="article-excerpt">
+                    Website speed matters. Explore practical techniques to optimize your frontend performance,
+                    from image optimization to CSS and JavaScript best practices.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </article>
+
+            <article class="article-item">
+                <a href="#" class="article-title">Building Accessible Forms: A Complete Guide</a>
+                <div class="article-meta">
+                    <span class="article-tag">Accessibility</span>
+                    <span>September 2024</span>
+                    <span>8 min read</span>
+                </div>
+                <p class="article-excerpt">
+                    Forms are crucial for user interaction. Learn how to create forms that are accessible to everyone,
+                    including users with disabilities, using proper HTML and ARIA attributes.
+                </p>
+                <a href="#" class="read-more">Read More →</a>
+            </article>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; All rights reserved 2025</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>

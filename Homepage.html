@@ -1,1 +1,350 @@
-tml
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 1. SEO & Favicon (Pareto Rules) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audyari Wiyono - Frontend Developer CV</title>
+    <meta name="description"
+        content="Professional CV of Audyari Wiyono, a Frontend Developer with skills in HTML, CSS, and Responsive Design.">
+    <link rel="icon" type="image/png" href="favicon.png"> <!-- Pastikan file gambar ini ada -->
+
+    <!-- 2. Open Graph Tags (Social Media) -->
+    <meta property="og:title" content="CV - Audyari Wiyono | Frontend Developer">
+    <meta property="og:description"
+        content="Lihat portfolio dan keahlian Audyari Wiyono dalam pengembangan web modern.">
+    <meta property="og:image" content="https://your-website-url.com/og-image.jpg">
+    <meta property="og:url" content="https://your-website-url.com">
+    <meta property="og:type" content="website">
+
+    <!-- 3. Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Audyari Wiyono - Frontend Developer CV">
+    <meta name="twitter:description" content="Professional CV of Audyari Wiyono. HTML, CSS, JS.">
+    <meta name="twitter:image" content="https://your-website-url.com/og-image.jpg">
+
+    <!-- CSS Styles -->
+    <style>
+        /* Reset & Base Variables */
+        :root {
+            --primary-color: #2c3e50;
+            /* Warna Teks Utama (Dark Blue/Grey) */
+            --accent-color: #3498db;
+            /* Warna Aksen (Link/Tombol) */
+            --bg-color: #f4f4f4;
+            /* Background Halaman */
+            --paper-color: #ffffff;
+            /* Background CV seperti kertas */
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--primary-color);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        /* Container Utama (Bentuk Kertas) */
+        .cv-container {
+            background-color: var(--paper-color);
+            width: 100%;
+            max-width: 800px;
+            /* Lebar standar CV yang enak dibaca */
+            padding: 60px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* HEADER SECTION */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation Bar */
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        nav a.active {
+            color: var(--accent-color);
+            font-weight: bold;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        /* GENERAL SECTION STYLES */
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        /* PROJECTS SECTION */
+        .project-item {
+            margin-bottom: 30px;
+            background: #fafafa;
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .project-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* WORK EXPERIENCE & EDUCATION */
+        .experience-item,
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 5px;
+        }
+
+        .role {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .company {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .date {
+            font-size: 0.9rem;
+            color: #777;
+            font-style: italic;
+        }
+
+        .location {
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        /* TEACHER REVIEWS (Testimonials) */
+        .review-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            font-style: italic;
+        }
+
+        .review-author {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            font-style: normal;
+            text-align: right;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #888;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        /* RESPONSIVE (Mobile View) */
+        @media (max-width: 600px) {
+            .cv-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .item-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="cv-container">
+
+        <!-- HEADER: Nama, Jabatan, Navigasi -->
+        <header>
+            <h1>Audyari Wiyono</h1>
+            <p class="job-title">Frontend Developer</p>
+
+            <nav>
+                <ul>
+                    <li><a href="Homepage.html" class="active">Home</a></li>
+                    <li><a href="Projects.html">Projects</a></li>
+                    <li><a href="Articles.html">Articles</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- SECTION 1: PROJECTS -->
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <article class="project-item">
+                <span class="project-title">HTML Only Portfolio</span>
+                <p>A responsive portfolio website built strictly with semantic HTML5 and CSS3 without external
+                    frameworks. Focused on accessibility and performance.</p>
+                <a href="#" class="project-link">View Project →</a>
+            </article>
+
+            <article class="project-item">
+                <span class="project-title">Roundabout.sk Clone</span>
+                <p>Recreating the front-end interface of roundabout.sk using modern CSS Grid and Flexbox techniques to
+                    ensure perfect layout across devices.</p>
+                <a href="#" class="project-link">View Project →</a>
+            </article>
+        </section>
+
+        <!-- SECTION 2: WORK EXPERIENCE -->
+        <section id="experience">
+            <h2>Work Experience</h2>
+
+            <article class="experience-item">
+                <div class="item-header">
+                    <span class="role">Junior Frontend Developer</span>
+                    <time class="date">2023 - Present</time>
+                </div>
+                <div class="company">Roundabout.sk</div>
+                <ul>
+                    <li>Collaborated with the design team to implement pixel-perfect user interfaces.</li>
+                    <li>Optimized website loading speed by 30% using clean HTML/CSS practices.</li>
+                    <li>Maintained cross-browser compatibility and responsiveness.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION 3: EDUCATION -->
+        <section id="education">
+            <h2>Education</h2>
+
+            <article class="education-item">
+                <div class="item-header">
+                    <span class="role">Bachelor of Computer Science</span>
+                    <time class="date">2019 - 2023</time>
+                </div>
+                <div class="location">University of Technology</div>
+                <p><strong>Relevant Courses:</strong></p>
+                <ul>
+                    <li>Web Development Fundamentals</li>
+                    <li>Human-Computer Interaction (HCI)</li>
+                    <li>Database Systems</li>
+                    <li>Algorithms & Data Structures</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- SECTION 4: TEACHER REVIEWS -->
+        <section id="reviews">
+            <h2>Teacher Reviews</h2>
+
+            <div class="review-card">
+                <p>"Audyari demonstrates exceptional understanding of HTML semantics and modern layout techniques. A
+                    truly dedicated student."</p>
+                <span class="review-author">— Prof. John Smith, Web Development Lecturer</span>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; All rights reserved 2025</p>
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
