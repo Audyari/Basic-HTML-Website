@@ -79,7 +79,6 @@ d:/Belajar Web/HTML/Basic HTML Website/
 
 - Meta tag viewport yang tepat
 - Judul dan deskripsi deskriptif
-- Referensi favicon
 
 ## 🔧 Fitur Teknis
 
@@ -145,7 +144,6 @@ Untuk mengkustomisasi website ini:
 - [ ] Tambahkan link proyek aktual
 - [ ] Buat artikel/konten nyata
 - [ ] Implementasi backend formulir kontak (PHP, Node.js, dll.)
-- [ ] Tambahkan file favicon.png
 - [ ] Deploy ke hosting service
 - [ ] Tambahkan JavaScript untuk interaktivitas yang lebih baik
 - [ ] Implementasi dark mode toggle
