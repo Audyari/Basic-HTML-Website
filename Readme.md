@@ -78,8 +78,6 @@ d:/Belajar Web/HTML/Basic HTML Website/
 ### SEO & Meta Tags
 
 - Meta tag viewport yang tepat
-- Open Graph tags untuk media sosial
-- Twitter Card metadata
 - Judul dan deskripsi deskriptif
 - Referensi favicon
 
@@ -148,7 +146,6 @@ Untuk mengkustomisasi website ini:
 - [ ] Buat artikel/konten nyata
 - [ ] Implementasi backend formulir kontak (PHP, Node.js, dll.)
 - [ ] Tambahkan file favicon.png
-- [ ] Tambahkan file og-image.jpg untuk sharing sosial
 - [ ] Deploy ke hosting service
 - [ ] Tambahkan JavaScript untuk interaktivitas yang lebih baik
 - [ ] Implementasi dark mode toggle
