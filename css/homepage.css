@@ -1,0 +1,221 @@
+/* ===== CSS VARIABLES & RESET ===== */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #f4f4f4;
+    --paper-color: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-color: #eee;
+    --text-muted: #777;
+    --text-light: #555;
+    --bg-light: #fafafa;
+    --bg-lighter: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== LAYOUT & CONTAINER ===== */
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.cv-container {
+    background-color: var(--paper-color);
+    width: 100%;
+    max-width: 800px;
+    padding: 60px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* ===== HEADER COMPONENTS ===== */
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.job-title {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===== NAVIGATION COMPONENTS ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+nav a.active {
+    color: var(--accent-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* ===== TYPOGRAPHY & SECTIONS ===== */
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    display: inline-block;
+}
+
+/* ===== PROJECT COMPONENTS ===== */
+.project-item {
+    margin-bottom: 30px;
+    background: var(--bg-light);
+    padding: 20px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.project-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== EXPERIENCE & EDUCATION COMPONENTS ===== */
+.experience-item,
+.education-item {
+    margin-bottom: 25px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.role {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.company {
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.location {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 5px;
+    color: var(--text-light);
+}
+
+/* ===== TESTIMONIAL COMPONENTS ===== */
+.review-card {
+    background-color: var(--bg-lighter);
+    padding: 20px;
+    border-radius: 5px;
+    font-style: italic;
+}
+
+.review-author {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    font-style: normal;
+    text-align: right;
+}
+
+/* ===== FOOTER COMPONENTS ===== */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 600px) {
+    .cv-container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .item-header {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
