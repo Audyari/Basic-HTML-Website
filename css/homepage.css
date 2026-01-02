@@ -1,7 +1,9 @@
 /* ===== CSS VARIABLES & RESET ===== */
 :root {
+    /* 1. Pengendali Warna Global */
     --primary-color: #2c3e50;
     --accent-color: #3498db;
+    /* ============================= */
     --bg-color: #f4f4f4;
     --paper-color: #ffffff;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,23 +14,27 @@
     --bg-lighter: #f9f9f9;
 }
 
+/* 2. Reset CSS (* { ... }) -> "Stabilitas Layout" */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ===== LAYOUT & CONTAINER ===== */
+
 body {
     font-family: var(--font-main);
     background-color: var(--bg-color);
     color: var(--primary-color);
     line-height: 1.6;
+    /* 3. Flexbox Layout (display: flex) -> "Mesin Posisi" */
     display: flex;
     justify-content: center;
+    /* ================================================ */
     padding: 40px 20px;
 }
 
+/* 4. Container Styling -> "Bentuk Fisik Kertas" */
 .cv-container {
     background-color: var(--paper-color);
     width: 100%;
@@ -63,8 +69,10 @@ h1 {
 /* ===== NAVIGATION COMPONENTS ===== */
 nav ul {
     list-style: none;
+    /* 4. Flexbox Layout (display: flex) -> "Mesin Posisi" */
     display: flex;
     justify-content: center;
+    /* ================================================ */
     gap: 20px;
     flex-wrap: wrap;
 }
